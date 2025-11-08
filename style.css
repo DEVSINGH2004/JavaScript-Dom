@@ -19,3 +19,12 @@ html,body{
     margin-top: 20px;
     width: fit-content;
 }
+
+.img{
+    width: 200px;
+}
+
+.highlight{
+    background-color: red;
+    color: cyan;
+}
