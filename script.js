@@ -96,3 +96,67 @@ console.log(evenLi);
 evenLi.forEach(function(i){
     i.classList.toggle("highlight");
 })
+
+
+// Timers and Intervals
+
+//settimeout - executes a piece of code after a specified delay
+setTimeout(function(){
+    console.log("hello world");
+},3000);
+
+//setInterval - executes a piece of code repeatedly after a specified delay
+let tm = setInterval(function(){
+    console.log("hello world");
+},3000);
+
+//clearTimeout - stops the execution of a setTimeout
+clearTimeout(tm);
+
+//counter mini project
+
+// let counter = 10;
+// let t1 = setInterval(function(){
+//     if(counter>0){
+//         counter--;
+//     } else {
+//         clearInterval(t1);
+//         console.log("counter finished");
+//     }
+    
+//     console.log(counter);
+// },1000);
+
+// t1.clearInterval();
+
+//local storage - it is a web api that allows us to store data in the browser even when the browser is closed
+//it is a key value store
+//it is a string based store
+//it is a synchronous store
+//it is a client side store
+//it is a 10mb limit
+
+//storing , fetch , update and delete in local storage
+localStorage.setItem("name","Dev Singh");
+let Name = localStorage.getItem("name");
+console.log(Name);
+localStorage.setItem("name","harsh"); // property nhi to create krega
+localStorage.setItem("details",JSON.stringify({age:25,gender:"male"})); // as localstorage only saves string datatype so we need to convert it to string using JSON.stringify and then we can use JSON.parse to convert it back to object
+let details = JSON.parse(localStorage.getItem("details")); 
+console.log(details);
+
+//session storage - it is similar to local storage but it stores data only for the current session
+//it is cleared when the browser is closed
+sessionStorage.setItem("name","Dev Singh");
+let Name2 = sessionStorage.getItem("name");
+console.log(Name2);
+sessionStorage.setItem("name","harsh"); // property nhi to create krega
+sessionStorage.clear(); // clear all data in session storage
+
+//cookies - it is a small piece of data that is stored in the browser
+//it is a string based store
+//it is a synchronous store
+//it is a client side store
+//it is a 4kb limit
+
+
